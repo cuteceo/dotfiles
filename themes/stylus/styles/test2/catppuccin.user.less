@@ -1,0 +1,18 @@
+/* ==UserStyle==
+@name Test Catppuccin Official
+@namespace github.com/test
+@version 1.0.0
+@description Test
+@author test
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+@-moz-document url("https://example.com") {
+  #catppuccin(@darkFlavor);
+  
+  body {
+    background: @base;
+    color: @text;
+  }
+}
