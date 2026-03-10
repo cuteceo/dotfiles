@@ -1,0 +1,42 @@
+/* ==UserStyle==
+@name Test Multi Document
+@namespace github.com/test/multi
+@version 1.0.0
+@description Test
+@author test
+==/UserStyle== */
+
+@import "https://cdn.jsdelivr.net/gh/cuteceo/dotfiles@main/themes/stylus/lib.cutedark.less";
+
+@-moz-document domain("youtube.com") {
+  :root[dark] {
+    #catppuccin(@darkFlavor) !important;
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+
+    @white: if(@flavor = latte, @base, @text);
+    @black: if(@flavor = latte, @text, @base);
+
+    color: @text;
+    background: @base;
+  }
+}
+
+@-moz-document url-prefix("https://studio.youtube.com") {
+  :root[dark] {
+    #catppuccin(@darkFlavor);
+  }
+  :root {
+    #catppuccin(@lightFlavor);
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+
+    background-color: @base !important;
+    color: @text !important;
+  }
+}
