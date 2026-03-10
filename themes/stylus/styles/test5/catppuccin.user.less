@@ -11,6 +11,11 @@
 
 @import "https://cdn.jsdelivr.net/gh/cuteceo/dotfiles@main/themes/stylus/lib.cutedark.less";
 
+#catppuccin(@flavor) {
+  #lib.palette();
+  #lib.defaults();
+}
+
 @-moz-document domain("youtube.com") {
   :root[dark] {
     #catppuccin(@darkFlavor) !important;
