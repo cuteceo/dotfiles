@@ -1,0 +1,26 @@
+/* ==UserStyle==
+@name Test Official Lib With Vars
+@namespace github.com/test/official
+@version 1.0.0
+@description Test
+@author test
+@preprocessor less
+@var checkbox logo "Enable logo" 1
+@var checkbox oled "Enable black bars" 0
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+@-moz-document domain("youtube.com") {
+  :root[dark] {
+    #catppuccin(@darkFlavor) !important;
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+
+    color: @text;
+    background: @base;
+  }
+}
