@@ -1,0 +1,18 @@
+/* ==UserStyle==
+@name Test Import First
+@namespace github.com/test/importfirst
+@version 1.0.0
+@description Test
+@author test
+==/UserStyle== */
+
+@import "https://cdn.jsdelivr.net/gh/cuteceo/dotfiles@main/themes/stylus/lib.cutedark.less";
+
+@preprocessor less
+@var checkbox logo "Enable logo" 1
+
+@-moz-document domain("youtube.com") {
+  body {
+    background: @base;
+  }
+}
