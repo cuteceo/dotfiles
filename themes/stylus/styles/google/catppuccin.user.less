@@ -10,8 +10,6 @@
 @license MIT
 ==/UserStyle== */
 
-@darkFlavor: dark;
-
 @base: #131313;
 @mantle: #1E1D1E;
 @crust: #131313;
@@ -24,42 +22,25 @@
 @text: #CACCCA;
 @subtext0: #9E9E9E;
 @subtext1: #8F8F8F;
-@lavender: #81A9F6;
-@blue: #81A9F6;
-@sapphire: #307BF6;
-@sky: #7faef9;
-@teal: #3DB6B0;
-@green: #76BA53;
-@green-bright: #9DE478;
-@yellow: #E1D797;
-@peach: #D2602D;
-@maroon: #A8473B;
-@red: #A8473B;
-@red-bright: #DD6F61;
-@mauve: #AE30C2;
-@pink: #D86DE9;
-@flamingo: #D86DE9;
-@rosewater: #D86DE9;
 @accent: #81A9F6;
-@text-filter: brightness(0) saturate(100%) invert(83%) sepia(12%) saturate(286%) hue-rotate(185deg) brightness(101%) contrast(101%);
-
-@preprocessor less
-@var checkbox dark "Enable dark" 1
 
 @-moz-document regexp("^https?://(www\\.|images\\.)?google\\..*") {
-  :root {
-    #catppuccin(@darkFlavor);
+  html {
+    background: @base !important;
   }
-
-  #catppuccin(@flavor) {
-    &,
-    body {
-      background: @base !important;
-      color: @text !important;
-    }
-    
-    a {
-      color: @accent !important;
-    }
+  
+  body {
+    background: @base !important;
+    color: @text !important;
+  }
+  
+  a {
+    color: @accent !important;
+  }
+  
+  input, textarea {
+    background: @surface0 !important;
+    color: @text !important;
+    border-color: @surface2 !important;
   }
 }
