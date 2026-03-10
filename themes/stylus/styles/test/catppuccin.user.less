@@ -1,0 +1,18 @@
+/* ==UserStyle==
+@name Test cuteDark
+@namespace github.com/cuteceo/dotfiles/test
+@version 1.0.0
+@description Test
+@author test
+==/UserStyle== */
+
+@import "https://cdn.jsdelivr.net/gh/cuteceo/dotfiles@main/themes/stylus/lib.cutedark.less";
+
+@-moz-document url("https://example.com") {
+  #catppuccin(@darkFlavor);
+  
+  body {
+    background: @base;
+    color: @text;
+  }
+}
