@@ -1,0 +1,26 @@
+/* ==UserStyle==
+@name Test With Select Vars
+@namespace github.com/test/select
+@version 1.0.0
+@description Test
+@author test
+@preprocessor less
+@var select darkFlavor "Dark Flavor" ["dark:Dark*"]
+@var select lightFlavor "Light Flavor" ["dark:Dark"]
+==/UserStyle== */
+
+@import "https://cdn.jsdelivr.net/gh/cuteceo/dotfiles@main/themes/stylus/lib.cutedark.less";
+
+@-moz-document domain("youtube.com") {
+  :root[dark] {
+    #catppuccin(@darkFlavor) !important;
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+
+    color: @text;
+    background: @base;
+  }
+}
