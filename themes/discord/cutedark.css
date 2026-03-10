@@ -1,0 +1,503 @@
+/**
+ * @name cuteDark
+ * @description The darkest demons wear the cutest faces.
+ * @author cuteceo
+ * @version 1.0.0
+ * @source https://github.com/cuteceo/dotfiles
+ * @website https://cute.ceo
+ */
+
+/* Core color definitions */
+:root {
+  /* Base backgrounds - от тёмного к светлому */
+  --cutedark-bg-darkest: #131313;
+  --cutedark-bg-darker: #1A1A1A;
+  --cutedark-bg-dark: #1E1D1E;
+  --cutedark-bg-medium: #232323;
+  --cutedark-bg-light: #272727;
+  --cutedark-bg-lighter: #323232;
+  --cutedark-bg-element: #373636;
+  --cutedark-bg-hover: #353436;
+  --cutedark-bg-selected: #474646;
+  
+  /* Borders */
+  --cutedark-border: #404040;
+  --cutedark-border-subtle: #3A3A3A;
+  
+  /* Text */
+  --cutedark-text: #CACCCA;
+  --cutedark-text-bright: #DDDDDD;
+  --cutedark-text-muted: #9E9E9E;
+  
+  /* Accent colors */
+  --cutedark-accent-blue: #81A9F6;
+  --cutedark-accent-blue-bright: #7faef9;
+  --cutedark-accent-green: #76BA53;
+  --cutedark-accent-green-bright: #9DE478;
+  --cutedark-accent-yellow: #E1D797;
+  --cutedark-accent-yellow-muted: #857F5C;
+  --cutedark-accent-red: #A8473B;
+  --cutedark-accent-red-bright: #DD6F61;
+  --cutedark-accent-orange: #D2602D;
+  --cutedark-accent-cyan: #3DB6B0;
+  --cutedark-accent-cyan-bright: #5BDFD8;
+  --cutedark-accent-magenta: #AE30C2;
+  --cutedark-accent-magenta-bright: #D86DE9;
+  
+  /* Scrollbar */
+  --cutedark-scrollbar: #4C4D4D;
+  --cutedark-scrollbar-alpha: #4C4D4DAA;
+}
+
+.theme-dark, .theme-midnight {
+  /* Discord semantic background variables */
+  --background-primary: var(--cutedark-bg-darkest) !important;
+  --background-secondary: var(--cutedark-bg-dark) !important;
+  --background-secondary-alt: var(--cutedark-bg-medium) !important;
+  --background-tertiary: var(--cutedark-bg-darker) !important;
+  --background-accent: var(--cutedark-accent-blue) !important;
+  --background-floating: var(--cutedark-bg-dark) !important;
+  --background-nested-floating: var(--cutedark-bg-medium) !important;
+  --background-mobile-primary: var(--cutedark-bg-darkest) !important;
+  --background-mobile-secondary: var(--cutedark-bg-dark) !important;
+  --background-modifier-hover: var(--cutedark-bg-hover) !important;
+  --background-modifier-active: var(--cutedark-bg-selected) !important;
+  --background-modifier-selected: var(--cutedark-bg-selected) !important;
+  --background-modifier-accent: var(--cutedark-border-subtle) !important;
+  
+  /* Base background hierarchy */
+  --background-base-lowest: var(--cutedark-bg-darkest) !important;
+  --background-base-lower: var(--cutedark-bg-darker) !important;
+  --background-base-low: var(--cutedark-bg-dark) !important;
+  --background-surface-high: var(--cutedark-bg-medium) !important;
+  --background-surface-higher: var(--cutedark-bg-light) !important;
+  --background-surface-highest: var(--cutedark-bg-lighter) !important;
+  
+  /* Borders */
+  --border-subtle: var(--cutedark-border-subtle) !important;
+  --border-muted: var(--cutedark-border) !important;
+  --border-normal: var(--cutedark-border) !important;
+  --app-frame-border: var(--cutedark-border-subtle) !important;
+  
+  /* Text colors */
+  --text-normal: var(--cutedark-text) !important;
+  --text-muted: var(--cutedark-text-muted) !important;
+  --text-link: var(--cutedark-accent-blue) !important;
+  --header-primary: var(--cutedark-text-bright) !important;
+  --header-secondary: var(--cutedark-text-muted) !important;
+  --interactive-normal: var(--cutedark-text) !important;
+  --interactive-hover: var(--cutedark-text-bright) !important;
+  --interactive-active: var(--cutedark-text-bright) !important;
+  --interactive-muted: var(--cutedark-text-muted) !important;
+  
+  /* Channels */
+  --channels-default: var(--cutedark-text-muted) !important;
+  --channel-icon: var(--cutedark-text-muted) !important;
+  
+  /* Input fields */
+  --input-background: var(--cutedark-bg-element) !important;
+  --input-border: var(--cutedark-border) !important;
+  --input-placeholder-text: var(--cutedark-text-muted) !important;
+  
+  /* Scrollbar */
+  --scrollbar-thin-thumb: var(--cutedark-scrollbar) !important;
+  --scrollbar-thin-track: transparent !important;
+  --scrollbar-auto-thumb: var(--cutedark-scrollbar) !important;
+  --scrollbar-auto-track: var(--cutedark-bg-darkest) !important;
+  --scrollbar-auto-scrollbar-color-thumb: var(--cutedark-scrollbar) !important;
+  --scrollbar-auto-scrollbar-color-track: var(--cutedark-bg-darkest) !important;
+  
+  /* Brand colors */
+  --brand-experiment: var(--cutedark-accent-blue) !important;
+  --brand-experiment-560: var(--cutedark-accent-blue) !important;
+  --brand-experiment-600: var(--cutedark-accent-blue) !important;
+  
+  /* Status colors */
+  --status-positive-background: #0C4619 !important;
+  --status-positive-text: var(--cutedark-accent-green-bright) !important;
+  --status-warning-background: #3A310E !important;
+  --status-warning-text: var(--cutedark-accent-yellow) !important;
+  --status-danger-background: #46190C !important;
+  --status-danger-text: var(--cutedark-accent-red-bright) !important;
+  --info-positive-foreground: var(--cutedark-accent-green) !important;
+  --info-warning-foreground: var(--cutedark-accent-yellow) !important;
+  --info-danger-foreground: var(--cutedark-accent-red-bright) !important;
+  
+  /* Mention colors */
+  --mention-foreground: var(--cutedark-accent-blue) !important;
+  --mention-background: rgba(129, 169, 246, 0.1) !important;
+  
+  /* Button colors */
+  --button-secondary-background: var(--cutedark-bg-element) !important;
+  --button-secondary-background-hover: var(--cutedark-bg-selected) !important;
+  --button-secondary-background-active: var(--cutedark-bg-selected) !important;
+  
+  /* Modal/popup */
+  --modal-background: var(--cutedark-bg-darkest) !important;
+  --modal-footer-background: var(--cutedark-bg-darkest) !important;
+  
+  /* Card */
+  --card-primary-bg: var(--cutedark-bg-dark) !important;
+  --card-secondary-bg: var(--cutedark-bg-medium) !important;
+  --card-background-default: var(--cutedark-bg-dark) !important;
+  
+  /* Deprecated but still used */
+  --deprecated-card-bg: var(--cutedark-bg-dark) !important;
+  --deprecated-card-editable-bg: var(--cutedark-bg-medium) !important;
+  --deprecated-store-bg: var(--cutedark-bg-darkest) !important;
+  --deprecated-quickswitcher-input-background: var(--cutedark-bg-element) !important;
+  --deprecated-quickswitcher-input-placeholder: var(--cutedark-text-muted) !important;
+  --deprecated-text-input-bg: var(--cutedark-bg-element) !important;
+  --deprecated-text-input-border: var(--cutedark-border) !important;
+  
+  /* Elevation (shadows) */
+  --elevation-stroke: 0 0 0 1px var(--cutedark-border-subtle) !important;
+  
+  /* Activity card */
+  --activity-card-background: var(--cutedark-bg-dark) !important;
+  
+  /* Profile */
+  --profile-body-background-color: var(--cutedark-bg-dark) !important;
+  
+  /* Neutral palette overrides */
+  --neutral-79: var(--cutedark-scrollbar) !important;
+  --neutral-80: var(--cutedark-scrollbar) !important;
+  --neutral-88: var(--cutedark-bg-medium) !important;
+  --neutral-95: var(--cutedark-bg-darker) !important;
+  
+  /* Opacity overrides for hover states */
+  --opacity-4: rgba(202, 204, 202, 0.04) !important;
+  --opacity-8: rgba(202, 204, 202, 0.08) !important;
+  --opacity-12: rgba(202, 204, 202, 0.12) !important;
+  --opacity-16: rgba(202, 204, 202, 0.16) !important;
+  --opacity-20: rgba(202, 204, 202, 0.20) !important;
+  --opacity-24: rgba(202, 204, 202, 0.24) !important;
+  
+  /* Message hover */
+  --message-background-hover: rgba(202, 204, 202, 0.06) !important;
+}
+
+/* ===== SPECIFIC COMPONENT OVERRIDES ===== */
+
+/* Server list / Guild sidebar */
+.theme-dark .wrapper__216eb,
+.theme-midnight .wrapper__216eb {
+  background-color: var(--cutedark-bg-darkest) !important;
+}
+
+/* Channel sidebar */
+.theme-dark .sidebar_ded4b5,
+.theme-midnight .sidebar_ded4b5 {
+  background-color: var(--cutedark-bg-dark) !important;
+}
+
+/* Chat area */
+.theme-dark .chatContent_f75fb0,
+.theme-midnight .chatContent_f75fb0,
+.theme-dark .container__34c2c,
+.theme-midnight .container__34c2c,
+.theme-dark .container_fb64c9,
+.theme-midnight .container_fb64c9 {
+  background: var(--cutedark-bg-darkest) !important;
+}
+
+/* Members list */
+.theme-dark .container_cbd271,
+.theme-midnight .container_cbd271 {
+  background-color: var(--cutedark-bg-darkest) !important;
+}
+
+/* Message input */
+.theme-dark .channelTextArea_f75fb0,
+.theme-midnight .channelTextArea_f75fb0,
+.theme-dark .channelTextArea__74017:not(.inlineContainer__74017) .themedBackground__74017,
+.theme-midnight .channelTextArea__74017:not(.inlineContainer__74017) .themedBackground__74017 {
+  background: var(--cutedark-bg-dark) !important;
+}
+
+/* Title bar / Header */
+.theme-dark .container__9293f,
+.theme-midnight .container__9293f,
+.theme-dark .chatHeaderBar_a53846,
+.theme-midnight .chatHeaderBar_a53846 {
+  background-color: var(--cutedark-bg-darkest) !important;
+}
+
+/* User area at bottom */
+.theme-dark .panels_a4d4d9,
+.theme-midnight .panels_a4d4d9 {
+  background-color: var(--cutedark-bg-dark) !important;
+}
+
+/* Server header */
+.theme-dark .header__0b563,
+.theme-midnight .header__0b563 {
+  background-color: var(--cutedark-bg-darkest) !important;
+}
+
+/* Settings */
+.theme-dark .contentRegion__23e6b,
+.theme-midnight .contentRegion__23e6b,
+.theme-dark .contentRegionScroller__23e6b,
+.theme-midnight .contentRegionScroller__23e6b {
+  background: var(--cutedark-bg-darkest) !important;
+}
+
+.theme-dark .sidebarRegion__23e6b,
+.theme-midnight .sidebarRegion__23e6b {
+  background: var(--cutedark-bg-dark) !important;
+}
+
+.theme-dark .sidebarRegionScroller__23e6b,
+.theme-midnight .sidebarRegionScroller__23e6b {
+  border-right: 1px solid var(--cutedark-border-subtle) !important;
+}
+
+/* Modals */
+.theme-dark .root__3ea1c,
+.theme-midnight .root__3ea1c {
+  background-color: var(--cutedark-bg-darkest) !important;
+}
+
+.theme-dark .footer__3ea1c,
+.theme-midnight .footer__3ea1c {
+  background-color: var(--cutedark-bg-darkest) !important;
+  border-top: 1px solid var(--cutedark-border-subtle) !important;
+}
+
+/* Popouts */
+.theme-dark .popout_a16aea,
+.theme-midnight .popout_a16aea,
+.theme-dark .selectDropdown__5fa2f,
+.theme-midnight .selectDropdown__5fa2f {
+  background-color: var(--cutedark-bg-medium) !important;
+  border: 1px solid var(--cutedark-border) !important;
+}
+
+/* Context menus */
+.theme-dark .menu__43313,
+.theme-midnight .menu__43313 {
+  background-color: var(--cutedark-bg-medium) !important;
+  border: 1px solid var(--cutedark-border) !important;
+}
+
+/* Emoji/GIF/Sticker picker */
+.theme-dark .contentWrapper_fdb355,
+.theme-midnight .contentWrapper_fdb355 {
+  background-color: var(--cutedark-bg-dark) !important;
+}
+
+.theme-dark .header_fdb355,
+.theme-midnight .header_fdb355 {
+  background-color: var(--cutedark-bg-dark) !important;
+  border-bottom: 1px solid var(--cutedark-border-subtle) !important;
+}
+
+/* Search bar */
+.theme-dark .searchBar_d73dee,
+.theme-midnight .searchBar_d73dee {
+  background-color: var(--cutedark-bg-element) !important;
+}
+
+/* User profile popup */
+.theme-dark .userPopoutInner__7e0e2,
+.theme-midnight .userPopoutInner__7e0e2 {
+  background-color: var(--cutedark-bg-darkest) !important;
+}
+
+.theme-dark .userPopoutOverlayBackground__7e0e2,
+.theme-midnight .userPopoutOverlayBackground__7e0e2 {
+  background-color: var(--cutedark-bg-darkest) !important;
+}
+
+/* Role pills */
+.theme-dark .role_d47ae0,
+.theme-midnight .role_d47ae0 {
+  background-color: var(--cutedark-bg-element) !important;
+  border-color: var(--cutedark-border) !important;
+}
+
+/* Tooltips */
+.theme-dark .tooltip_a8e215,
+.theme-midnight .tooltip_a8e215 {
+  background-color: var(--cutedark-bg-lighter) !important;
+  color: var(--cutedark-text) !important;
+}
+
+/* Autocomplete */
+.theme-dark .autocomplete__13533,
+.theme-midnight .autocomplete__13533 {
+  border: 1px solid var(--cutedark-border) !important;
+  background-color: var(--cutedark-bg-dark) !important;
+}
+
+/* Cards in settings */
+.theme-dark .cardPrimary__0e7f3,
+.theme-midnight .cardPrimary__0e7f3 {
+  background-color: var(--cutedark-bg-dark) !important;
+  border-color: var(--cutedark-border) !important;
+}
+
+/* Code blocks */
+.theme-dark .markup_f8f345 code,
+.theme-midnight .markup_f8f345 code {
+  background: var(--cutedark-bg-element) !important;
+  border: 1px solid var(--cutedark-border-subtle) !important;
+}
+
+.theme-dark .markup_f8f345 pre,
+.theme-midnight .markup_f8f345 pre {
+  background: var(--cutedark-bg-dark) !important;
+  border: 1px solid var(--cutedark-border-subtle) !important;
+}
+
+/* Embeds */
+.theme-dark .embedFull__33ab1,
+.theme-midnight .embedFull__33ab1 {
+  background-color: var(--cutedark-bg-dark) !important;
+  border-color: var(--cutedark-border-subtle) !important;
+}
+
+/* Reactions */
+.theme-dark .reaction_d543d6,
+.theme-midnight .reaction_d543d6 {
+  background-color: var(--cutedark-bg-element) !important;
+}
+
+.theme-dark .reaction_d543d6:hover,
+.theme-midnight .reaction_d543d6:hover {
+  background-color: var(--cutedark-bg-selected) !important;
+}
+
+/* Voice connected UI */
+.theme-dark .wrapper_f7ecac,
+.theme-midnight .wrapper_f7ecac {
+  background-color: var(--cutedark-bg-medium) !important;
+}
+
+/* Notice/Banner bars */
+.theme-dark .notice_f7ecac,
+.theme-midnight .notice_f7ecac {
+  background-color: var(--cutedark-accent-blue) !important;
+}
+
+/* New messages bar */
+.theme-dark .newMessagesBar_f75fb0,
+.theme-midnight .newMessagesBar_f75fb0 {
+  background-color: var(--cutedark-accent-blue) !important;
+}
+
+/* Unread pill */
+.theme-dark .unread_d0c57d,
+.theme-midnight .unread_d0c57d {
+  background-color: var(--cutedark-accent-blue) !important;
+}
+
+/* Active now / Activity status */
+.theme-dark .activityPanel_a89db8,
+.theme-midnight .activityPanel_a89db8 {
+  background-color: var(--cutedark-bg-dark) !important;
+}
+
+/* ===== STATUS COLORS ===== */
+.theme-dark, .theme-midnight {
+  --status-positive: var(--cutedark-accent-green) !important;
+  --status-warning: var(--cutedark-accent-yellow) !important;
+  --status-danger: var(--cutedark-accent-red-bright) !important;
+  --green-360: var(--cutedark-accent-green) !important;
+  --yellow-300: var(--cutedark-accent-yellow) !important;
+  --red-400: var(--cutedark-accent-red-bright) !important;
+}
+
+/* ===== PROTECTION PAGE COLORS ===== */
+.theme-midnight {
+  --social-color: var(--cutedark-accent-magenta) !important;
+  --coockie-color: var(--cutedark-accent-cyan-bright) !important;
+  --fingerprinter-color: var(--cutedark-accent-yellow) !important;
+  --cryptominer-color: var(--cutedark-accent-blue) !important;
+  --tracker-color: var(--cutedark-accent-green) !important;
+}
+
+/* ===== GRADIENTS ===== */
+.theme-dark .formWithLoadedChatInput_f75fb0:before,
+.theme-midnight .formWithLoadedChatInput_f75fb0:before,
+.theme-dark .chatGradient__36d07,
+.theme-midnight .chatGradient__36d07 {
+  background: linear-gradient(to bottom, transparent, var(--cutedark-bg-darkest) 100%) !important;
+}
+
+.theme-dark .chatTypingGradientAtBottom__36d07,
+.theme-midnight .chatTypingGradientAtBottom__36d07 {
+  background: linear-gradient(to bottom, transparent, var(--cutedark-bg-darkest) 8px, var(--cutedark-bg-darkest) 100%) !important;
+}
+
+.theme-dark .chatTypingGradientNotAtBottom__36d07,
+.theme-midnight .chatTypingGradientNotAtBottom__36d07 {
+  background: linear-gradient(to bottom, transparent, var(--cutedark-bg-darkest) 72px, var(--cutedark-bg-darkest) 100%) !important;
+}
+
+/* ===== LINKS ===== */
+.theme-dark .anchor_f8f345,
+.theme-midnight .anchor_f8f345,
+.theme-dark .anchorUnderlineOnHover_f8f345,
+.theme-midnight .anchorUnderlineOnHover_f8f345 {
+  color: var(--cutedark-accent-blue) !important;
+}
+
+.theme-dark .anchor_f8f345:hover,
+.theme-midnight .anchor_f8f345:hover {
+  color: var(--cutedark-accent-blue-bright) !important;
+}
+
+/* ===== MENTION HIGHLIGHTS ===== */
+.theme-dark .mentioned_f8f345,
+.theme-midnight .mentioned_f8f345 {
+  background-color: rgba(129, 169, 246, 0.08) !important;
+}
+
+.theme-dark .mentioned_f8f345:before,
+.theme-midnight .mentioned_f8f345:before {
+  background-color: var(--cutedark-accent-blue) !important;
+}
+
+/* ===== FRIEND ACTIVITY ===== */
+.theme-dark .outer_bf1984,
+.theme-midnight .outer_bf1984 {
+  background-color: var(--cutedark-bg-dark) !important;
+}
+
+.theme-dark .outer_bf1984:hover,
+.theme-midnight .outer_bf1984:hover {
+  background-color: var(--cutedark-bg-medium) !important;
+}
+
+/* ===== SEARCH RESULTS HIGHLIGHT ===== */
+.theme-dark .highlight,
+.theme-midnight .highlight {
+  background-color: rgba(251, 238, 92, 0.5) !important;
+  color: var(--cutedark-text-bright) !important;
+}
+
+/* ===== PILLS AND BADGES ===== */
+.theme-dark .numberBadge_fdb355,
+.theme-midnight .numberBadge_fdb355 {
+  background-color: var(--cutedark-accent-red-bright) !important;
+}
+
+/* ===== SLIDER/SWITCHES ===== */
+.theme-dark .slider_a562c8 .bar_a562c8,
+.theme-midnight .slider_a562c8 .bar_a562c8 {
+  background-color: var(--cutedark-bg-lighter) !important;
+}
+
+/* ===== DIVIDERS ===== */
+.theme-dark .divider_d0c57d,
+.theme-midnight .divider_d0c57d {
+  border-color: var(--cutedark-border-subtle) !important;
+}
+
+/* ===== NITRO / BOOST GRADIENTS ===== */
+.theme-dark .premiumBrandRefreshBackground_e5f3a9,
+.theme-midnight .premiumBrandRefreshBackground_e5f3a9 {
+  background-color: var(--cutedark-bg-darkest) !important;
+}
